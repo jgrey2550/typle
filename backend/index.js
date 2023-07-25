@@ -12,7 +12,7 @@ const port = process.env.PORT || 5000;
 //app.use(cors());
 app.use(cors(
     {
-        origin: ["https://typle2-frontend.vercel.app"],
+        origin: ["https://typle-frontend.vercel.app"],
         methods: ["POST", "GET", "PUT"],
         credentials: true
     }
