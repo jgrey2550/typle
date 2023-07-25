@@ -32,7 +32,7 @@ function Navbar() {
 
   //buttons to each part of the website + shows userID at top
   return <header style={{ display: "flex", alignItems: "center" }}>
-    <h1 style={{ marginRight: "auto" }}>Typle</h1>
+    <h1 style={{ marginRight: "auto" }}>Typle 2</h1>
     <h1>{username ? `Welcome ${username}` : 'u are not logged in'}</h1>
     <MenuButton />
     <ProfileButton/>
