@@ -9,14 +9,14 @@ app.use(express.json());
 const port = process.env.PORT || 5000;
 //port from .env file
 
-app.use(cors());
-// app.use(cors(
-//     {
-//         origin: ["https://typle2-frontend.vercel.app"],
-//         methods: ["POST", "GET", "PUT"],
-//         credentials: true
-//     }
-// ));
+//app.use(cors());
+app.use(cors(
+    {
+        origin: ["https://typle2-frontend.vercel.app"],
+        methods: ["POST", "GET", "PUT"],
+        credentials: true
+    }
+));
 
 const uri = 'mongodb+srv://jgrey2550:Rq5GF6hwVRYtuutF@cluster0.qgvh47s.mongodb.net/?retryWrites=true&w=majority';
 //mongodb uri from .env file
