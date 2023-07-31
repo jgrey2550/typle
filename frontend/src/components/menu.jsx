@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-import pic from "./pictures/1.png";
+import dailyTyple from "./pictures/dailyTyple.png";
+import typleBattle from "./pictures/typleBattle.png";
+import typle from "./pictures/typle.png";
+import campaign from "./pictures/campaign.png";
 import Navbar from "./navbar";
 import { useNavigate } from "react-router-dom";
 
@@ -15,15 +18,16 @@ function Menu() {
     <div>
     <Navbar/>
     <h1>Menu</h1>
-      <div>
-          <img src={pic} onClick={() => changeScreen("Campaign")} />
-          <img src={pic} onClick={() => changeScreen("Learn")} />
-          <img src={pic} onClick={() => changeScreen("Typle")} />
+      <div className="menu-div">
+        <div className="menu-div-inner">
+          <img src={campaign} onClick={() => changeScreen("Campaign")} /> 
+          <img src={typle} onClick={() => changeScreen("Typle")} />
         </div>
-        <div>
-          <img src={pic} onClick={() => changeScreen("DailyTyple")} />
-          <img src={pic} onClick={() => changeScreen("TypleBattle")} />
+        <div className="menu-div-inner"> 
+          <img src={dailyTyple} onClick={() => changeScreen("DailyTyple")} />
+          <img src={typleBattle} onClick={() => changeScreen("TypleBattle")} />
         </div>
+      </div>
     </div>
   );
 }

@@ -9,7 +9,10 @@ app.use(express.json());
 const port = process.env.PORT || 5000;
 //port from .env file
 
-//app.use(cors());
+//use below for local
+// app.use(cors());
+
+//use below for vercel
 app.use(cors(
     {
         origin: ["https://typle-frontend.vercel.app"],

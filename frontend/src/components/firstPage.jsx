@@ -1,11 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import logo from "./pictures/logo.png"
 
 function FirstPage() {
-    return <div>
-        <Link to="/login">Login</Link>
-        <br />
-        <Link to="/createUser">Create Account</Link>
+    const navigate = useNavigate();
+    function login() {
+        navigate('/login');
+    }
+    function createUser() {
+        navigate('/createUser');
+    }
+
+    return <div className="login-button-div">
+        <img src={logo} className="first-page-logo"/>
+            <button className="login-button primary" onClick={login}>Login</button>
+            <button className="login-button secondary" onClick={createUser}>Create Account</button>
     </div>
 }
 
