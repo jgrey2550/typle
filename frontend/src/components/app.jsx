@@ -14,6 +14,7 @@ import Leaderboards from "./jsx_leaderboards/leaderboards";
 import Typle from "./jsx_typle/typle";
 import LevelsBoards from "./jsx_leaderboards/levelsBoards";
 import TypleBoards from "./jsx_leaderboards/typleBoards";
+import BattleBoards from "./jsx_leaderboards/battleBoards";
 
 //defining routes for all paths ex localhost:5000/menu will take to to <Menu/>
 function App() {
@@ -33,6 +34,7 @@ function App() {
             <Route path="/typle" element={<Typle/>}/>
             <Route path="/leaderboards/levels" element={<LevelsBoards/>} />
             <Route path="/leaderboards/typle" element={<TypleBoards/>} />
+            <Route path="/leaderboards/battle" element={<BattleBoards/>}/>
         </Routes>
     </Router>
 }

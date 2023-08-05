@@ -73,21 +73,25 @@ function Shop() {
     return <div>
         <Navbar/>
         <h1>Shop</h1>
-        <p>Welcome to Shop</p>
+        <p>Welcome to the Shop</p>
         <p>You currently have {coins} coins</p>
         <br/>
         <div>
-        <div className="shop-items-container">
-            {items.map((item, index) => (
-                <ShopItem key={index} name={item.name} image={item.image} price={item.price} changeItem={changeItem}/>
-            ))}
-            {selectedItem && (
-                <div className="shop-display-item">
-                    <Keyboard equiptSkin={selectedItem}/>
-                    <h1>{selectedItem}</h1>
-                    <button onClick={closeDisplay}>Close</button>
-                </div>
-            )}
+            <h2>Skins</h2>
+            <div className="shop-items-container">
+                {items.map((item, index) => (
+                    <ShopItem key={index} name={item.name} image={item.image} price={item.price} changeItem={changeItem}/>
+                ))}
+                {selectedItem && (
+                    <div className="shop-display-item">
+                        <Keyboard equiptSkin={selectedItem}/>
+                        <h1>{selectedItem}</h1>
+                        <button onClick={closeDisplay}>Close</button>
+                    </div>
+                )}
+            </div>
+        <div>
+            <h2>Animations</h2>
         </div>
       </div>
     </div>

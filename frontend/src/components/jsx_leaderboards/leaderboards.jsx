@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "../navbar";
-import pic from "../pictures/0.png"
 import { useNavigate } from "react-router-dom";
 
 function Leaderboards() {
@@ -14,8 +13,11 @@ function Leaderboards() {
         <Navbar/>
         <h1>Leaderboards</h1>
         <p>Welcome to Leaderboards</p>
-        <img src={pic} onClick={() => changeScreen("levels")}/>
-        <img src={pic} onClick={() => changeScreen("typle")}/>
+        <div className="board-btn-div">
+            <button className="board-btn left" onClick={() => changeScreen("levels")}>Levels Leaderboard</button>
+            <button className="board-btn mid" onClick={() => changeScreen("battle")}>Battle Leaderboard</button>
+            <button className="board-btn right" onClick={() => changeScreen("typle")}>Typle Leaderboard</button>
+        </div>
     </div>
 }
 
